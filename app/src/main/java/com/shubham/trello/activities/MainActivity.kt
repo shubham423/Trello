@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.projemanag.utils.Constants
 import com.shubham.trello.R
 import com.shubham.trello.adapters.BoardItemsAdapter
 import com.shubham.trello.firebase.FirestoreClass
 import com.shubham.trello.models.Board
 import com.shubham.trello.models.User
+import com.shubham.trello.utils.Constants
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*

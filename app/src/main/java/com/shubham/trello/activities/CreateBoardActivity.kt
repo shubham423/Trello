@@ -14,10 +14,10 @@ import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.projemanag.utils.Constants
 import com.shubham.trello.R
 import com.shubham.trello.firebase.FirestoreClass
 import com.shubham.trello.models.Board
+import com.shubham.trello.utils.Constants
 import kotlinx.android.synthetic.main.activity_create_board.*
 import java.io.IOException
 

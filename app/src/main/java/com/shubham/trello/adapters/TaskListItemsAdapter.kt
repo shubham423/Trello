@@ -158,14 +158,12 @@ open class TaskListItemsAdapter(
                 context.deleteTaskList(position)
             }
         }
-
-        //performing negative action
         builder.setNegativeButton("No") { dialogInterface, which ->
             dialogInterface.dismiss()
         }
         val alertDialog: AlertDialog = builder.create()
-        alertDialog.setCancelable(false) // Will not allow user to cancel after clicking on remaining screen area.
-        alertDialog.show()  // show the dialog to UI
+        alertDialog.setCancelable(false)
+        alertDialog.show()
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view)
