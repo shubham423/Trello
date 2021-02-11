@@ -4,20 +4,20 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Board(
-    val name: String = "",
-    val image: String = "",
-    val createdBy: String = "",
-    val assignedTo: ArrayList<String> = ArrayList(),
-    var documentId: String = "",
-    var taskList: ArrayList<Task> = ArrayList()
+        val name: String = "",
+        val image: String = "",
+        val createdBy: String = "",
+        val assignedTo: ArrayList<String> = ArrayList(),
+        var documentId: String = "",
+        var taskList: ArrayList<Task> = ArrayList()
 ) : Parcelable {
     constructor(source: Parcel) : this(
-        source.readString()!!,
-        source.readString()!!,
-        source.readString()!!,
-        source.createStringArrayList()!!,
-        source.readString()!!,
-        source.createTypedArrayList(Task.CREATOR)!!
+            source.readString()!!,
+            source.readString()!!,
+            source.readString()!!,
+            source.createStringArrayList()!!,
+            source.readString()!!,
+            source.createTypedArrayList(Task.CREATOR)!!
     )
 
     override fun describeContents() = 0

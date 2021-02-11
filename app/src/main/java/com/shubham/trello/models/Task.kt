@@ -2,12 +2,11 @@ package com.shubham.trello.models
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.projemanag.model.Card
 
 data class Task(
         var title: String = "",
         val createdBy: String = "",
-        val cards: ArrayList<Card> = ArrayList()
+        var cards: ArrayList<Card> = ArrayList()
 ) : Parcelable {
     constructor(source: Parcel) : this(
             source.readString()!!,

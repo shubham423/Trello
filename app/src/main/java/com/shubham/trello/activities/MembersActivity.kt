@@ -18,9 +18,9 @@ import kotlinx.android.synthetic.main.activity_members.*
 import kotlinx.android.synthetic.main.dialog_search_member.*
 
 class MembersActivity : BaseActivity() {
+
     private lateinit var mBoardDetails: Board
     private lateinit var mAssignedMembersList: ArrayList<User>
-
     private var anyChangesDone: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +32,11 @@ class MembersActivity : BaseActivity() {
         }
 
         setupActionBar()
+
         showProgressDialog(resources.getString(R.string.please_wait))
         FirestoreClass().getAssignedMembersListDetails(
-                this@MembersActivity,
-                mBoardDetails.assignedTo
+            this@MembersActivity,
+            mBoardDetails.assignedTo
         )
     }
 
@@ -101,6 +102,7 @@ class MembersActivity : BaseActivity() {
                 FirestoreClass().getMemberDetails(this@MembersActivity, email)
             } else {
                 showErrorSnackBar("Please enter members email address.")
+
             }
         })
         dialog.tv_cancel.setOnClickListener(View.OnClickListener {
@@ -115,12 +117,15 @@ class MembersActivity : BaseActivity() {
 
         FirestoreClass().assignMemberToBoard(this@MembersActivity, mBoardDetails, user)
     }
+
     fun memberAssignSuccess(user: User) {
 
         hideProgressDialog()
 
         mAssignedMembersList.add(user)
+
         anyChangesDone = true
+
         setupMembersList(mAssignedMembersList)
     }
 }
